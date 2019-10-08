@@ -54,7 +54,7 @@ html {
     input[type='text'] {
         background-color: $#e8d3db;
         border: 1px solid darken($#e8d3db, 10);
-        line-height: 40px;
+        line-height: 50px;
         width: 80%;
         font-size: 2em;
         direction: rtl;
