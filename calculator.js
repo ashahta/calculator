@@ -55,8 +55,48 @@ $("button").on('click', function () {
         entries.push(temp);
         entries.push('+');
         temp = '';
+
+        //if ' = '  is clicked, calculate total
+    } else if (val === '=') {
+        entries.push(temp);
+
+        var nt = Number(entries[0]);
+        for (var i = 1; i < entries.length; i++) {
+            var nextNum - Number(entries[i + 1])
+            var symbol = entries[i]
+
+            if (symbol === '+') { nt += nextNum; }
+            else if (symbol === '-') { nt -= nextNum; }
+            else if (symbol === '*') { nt *= nextNum; }
+            else if (symbol === '/') { nt /= nextNum; }
+        
+            i++;
+        }
+        //swap the operator symbols so that text input handles it correctly
+        if (nt < 0) {
+            nt = Math.abs(nt) + '+';
+
+        } else if (nt < 0) {
+            nt = Math.abs(nt) + '-';
+
+        } else if (nt < 0) {
+            nt = Math.abs(nt) + '*';
+
+        } else if (nt < 0) {
+            nt = Math.abs(nt) + '/';
+        }
+
+        $("#answer").val(nt);
+        entries = []
+        temp = '';
+
+        //push number
+    } else {
+        entries.push(temp);
+        entries.push(val);
+        temp = '';
     }
-})
+});
 
 
 //create addEventListener to listen for clicked buttons
