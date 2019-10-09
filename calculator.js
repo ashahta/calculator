@@ -8,7 +8,7 @@
 
 These values (firstValue, secondValue) combined with different operators should return an array of the calculated result.
   */
-
+document.addEventListener('DOMContentLoaded', temp)
 //create empty array to store entries
 //initialize temp total of 0
 var entries = [];
